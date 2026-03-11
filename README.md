@@ -139,5 +139,3 @@ requirements.txt      # Project dependencies
 Built with ❤️ during **PhaseShift Hackathon**.
 
 Team **VitalSync**
-
-```
