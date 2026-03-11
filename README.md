@@ -1,69 +1,143 @@
-# 🩺 AI-Enabled Virtual Health Assistant for Refugees
+# 🩺 VitalSync – AI-Enabled Virtual Health Assistant for Refugees
+
+🏆 **Top 5 Finalist – PhaseShift Hackathon, BMS College of Engineering (120 teams)**
 
 Refugees and displaced communities often lack access to reliable healthcare.  
-This project provides an **AI-powered platform** that empowers vulnerable populations with accessible health support.  
+**VitalSync** is an AI-powered healthcare assistant designed to provide accessible medical guidance through AI symptom analysis, voice interaction, and medical report processing.
 
 ---
 
 ## ✨ Key Features
 
-- ✅ **Medical Report Simplification** – Upload PDF medical reports, auto-extract text, and generate a secure SHA-256 hash for data integrity.  
-- ✅ **Symptom Checker with AI Triage** – Input symptoms via text or voice. Get AI-powered advice with color-coded severity levels (🔴 Emergency, 🟡 Moderate, 🟢 Mild).  
-- ✅ **Voice Input & Output** – Speech-to-Text for users with low literacy and Text-to-Speech for multilingual accessibility.  
-- ✅ **Camera-Based Anemia Detection** – Prototype using OpenCV to analyze eye/lip images for anemia signs.  
-- ✅ **Vaccination Tracking** – Personalized vaccination records linked to user ID and stored in SQLite.  
-- ✅ **Nearby Humanitarian Health Services** – Lookup from `clinics.json` for closest available services.  
-- ✅ **Downloadable Health Records** – Generate a personal PDF record of chats, uploaded reports, and report hashes.  
+- **Medical Report Simplification**  
+  Upload PDF medical reports, automatically extract text, and generate a secure SHA-256 hash to ensure data integrity.
+
+- **AI Symptom Checker with Triage**  
+  Input symptoms via text or voice to receive AI-powered guidance with severity indicators:  
+  🔴 Emergency | 🟡 Moderate | 🟢 Mild.
+
+- **Voice Input & Output**  
+  Speech-to-Text and Text-to-Speech support improves accessibility for users with low literacy and multilingual needs.
+
+- **Camera-Based Anemia Detection**  
+  Prototype system using OpenCV to analyze eye/lip images for potential anemia indicators.
+
+- **Vaccination Tracking**  
+  Store and manage personalized vaccination records linked to a user ID using SQLite.
+
+- **Nearby Humanitarian Health Services**  
+  Finds nearby clinics and healthcare services using a dataset (`clinics.json`).
+
+- **Downloadable Health Records**  
+  Generate a personal PDF containing chats, uploaded medical reports, and verification hashes.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend/UI:** [Streamlit](https://streamlit.io/)  
-- **AI Model:** [Google Gemini](https://ai.google.dev/) via `google-generativeai`  
-- **Database:** SQLite3  
-- **PDF Handling:** `pdfplumber`, `fpdf`  
-- **Voice:** Vosk (Speech-to-Text), `gTTS` (Text-to-Speech)  
-- **Camera/ML:** OpenCV (`cv2`)  
-- **Env Management:** `python-dotenv`  
+**Frontend / UI**
+- Streamlit
+
+**AI / ML**
+- Google Gemini API (`google-generativeai`)
+
+**Backend & Database**
+- SQLite3
+
+**Document Processing**
+- pdfplumber
+- fpdf
+
+**Voice Processing**
+- Vosk (Speech-to-Text)
+- gTTS (Text-to-Speech)
+
+**Computer Vision**
+- OpenCV (`cv2`)
+
+**Environment Management**
+- python-dotenv
 
 ---
 
 ## ⚙️ Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/refugeehealthassistant.git
-   cd refugeehealthassistant
-2. Create a virtual env:
-   python -m venv venv
-   source venv/bin/activate   # Mac/Linux
-   venv\Scripts\activate      # Windows
-   
-3. Install depedencies:
-    pip install -r requirements.txt
-   
-5. Add your gemini api key in a .env file:
-   GOOGLE_API_KEY=your_api_key_here
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/vitalsync-ai-health-assistant.git
+cd vitalsync-ai-health-assistant
+````
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Mac / Linux**
+
+```bash
+source venv/bin/activate
+```
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add your Gemini API key
+
+Create a `.env` file:
+
+```
+GOOGLE_API_KEY=your_api_key_here
+```
 
 ---
 
-## Usage
+## 🚀 Usage
 
-  Run the Streamlit app:
+Run the Streamlit app:
 
-  streamlit run app.py
+```bash
+streamlit run app.py
+```
 
+Open in your browser:
 
-  Then open http://localhost:8501
-  in your browser.
-
-  ---
-
-## 👨‍👩‍👧 Authors
-
-Built with ❤️ for humanitarian innovation.
-
-Team: VitalSync
+```
+http://localhost:8501
+```
 
 ---
+
+## 📁 Project Structure
+
+```
+app.py                # Main Streamlit application
+clinics.json          # Dataset of nearby health services
+database.db           # SQLite database
+symptom_checker.py    # AI triage logic
+anemia_detector.py    # OpenCV anemia detection prototype
+requirements.txt      # Project dependencies
+```
+
+---
+
+## 👨‍💻 Authors
+
+Built with ❤️ during **PhaseShift Hackathon**.
+
+Team **VitalSync**
+
+```
